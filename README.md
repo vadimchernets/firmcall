@@ -6,12 +6,11 @@ The plugin that writes a company's own plugin — and the administrator's path t
 computer. A [Claude Code](https://claude.com/claude-code) plugin of Poly A1, for the person in a company who sets
 AI up. Repository: [github.com/vadimchernets/firmcall](https://github.com/vadimchernets/firmcall).
 
-**firmcall writes and checks; it buys nothing, opens no checkout and never asks for a card.** Seats and plans are
-bought by the person responsible for the company's accounts (billcall counts them).
+**firmcall writes and checks; it buys nothing.** Seats and plans are bought by the person responsible for the company's accounts (billcall counts them).
 
 ## What it does
 
-We don't know a company's tasks in advance — firmcall asks. An interview turns the three to five things its
+Every company's work is its own, and firmcall starts from it: an interview turns the three to five things its
 people do most into the company's own plugin, and one profile becomes everything the rollout needs:
 
 | Command | What the company gets |

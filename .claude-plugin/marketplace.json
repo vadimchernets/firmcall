@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "firmcall: the company's own plugin and the rules on every computer. Writes and checks; buys nothing.",
-    "version": "0.1.2"
+    "version": "0.1.3"
   },
   "plugins": [
     {
       "name": "firmcall",
       "source": "./",
       "description": "An interview turns the company's tasks into its own plugin with tests, a private catalogue and a Cowork zip; the rules file for every computer with Jamf and Intune exports; a lint for settings that switch the phone remote off. Buys nothing.",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "author": {
         "name": "Vadym Chernets"
       },

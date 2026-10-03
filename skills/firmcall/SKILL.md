@@ -14,8 +14,8 @@ Every command here is written for the **Bash** tool and starts with
 **PowerShell** (Windows without Git Bash), only the start changes: the launcher's path bare, with no quotes and no
 `&` — `${CLAUDE_PLUGIN_ROOT}/hooks/python.ps1 firmcall say skills/firmcall/scripts/firmcall.py …` — on one line.
 Only if that path has a space in it, write `& "${CLAUDE_PLUGIN_ROOT}/hooks/python.ps1" …` (the person is asked
-once). Never call `python3`, `python` or `py` yourself. If the launcher says firmcall "is paused" because there is no
-working Python 3 yet, say so in one plain line and write the files by hand from the shapes below.
+once). Never call `python3`, `python` or `py` yourself. If the launcher says firmcall "is paused" until this computer
+has Python 3, say so in one plain line and write the files by hand from the shapes below.
 
 The user said: $ARGUMENTS
 
@@ -24,7 +24,7 @@ responsible for the company's accounts (billcall counts them).
 
 ## 1. The interview (10 minutes)
 
-We don't know the company's work; ask, one question at a time, in plain words:
+The company knows its own work best; ask, one question at a time, in plain words:
 
 1. What does the company do, and how many people? (A sector template may fit: run
    `… firmcall.py templates` and offer the closest — legal, finance, marketing agency, customer support,
