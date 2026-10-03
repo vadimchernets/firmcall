@@ -1,5 +1,7 @@
 # firmcall
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23116718.svg)](https://doi.org/10.5281/zenodo.23116718)
+
 The plugin that writes a company's own plugin — and the administrator's path that puts the same rules on every
 computer. A [Claude Code](https://claude.com/claude-code) plugin of Poly A1, for the person in a company who sets
 AI up. Repository: [github.com/vadimchernets/firmcall](https://github.com/vadimchernets/firmcall).
