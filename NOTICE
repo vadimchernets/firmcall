@@ -1,0 +1,20 @@
+firmcall
+Copyright 2026 Vadym Chernets
+
+This product includes software developed by Vadym Chernets, as part of Poly A1.
+
+No third-party code is copied. The shapes firmcall writes follow public documentation, as read on 2026-10-02:
+- Managed settings, managed-settings.d, the MDM preference domain com.anthropic.claudecode, the HKLM key:
+  https://code.claude.com/docs/en/managed-settings
+- Permission rule paths (//, ~/, /, relative): https://code.claude.com/docs/en/permissions
+- Organisation plugins, strictKnownMarketplaces, extraKnownMarketplaces, enabledPlugins:
+  https://code.claude.com/docs/en/plugins/org
+- managed-mcp.json, managedMcpServers, allowedMcpServers: https://code.claude.com/docs/en/managed-mcp
+- Remote Control and the variables that switch it off, Trusted Devices: https://code.claude.com/docs/en/remote-control
+- Which plugin parts load in chat, Cowork and Claude Code; organisation sync refuses bin/:
+  https://claude.com/docs/plugins/org-rollout
+- The .mobileconfig layout follows Apple's Configuration Profile Reference (com.apple.ManagedClient.preferences).
+
+The sector templates point at open plugin catalogues the company's rules file can enable, each checked on
+2026-10-02: anthropics/knowledge-work-plugins (Apache-2.0), anthropics/claude-for-legal (Apache-2.0),
+anthropics/financial-services (Apache-2.0). Nothing from them is copied into firmcall.

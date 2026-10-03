@@ -1,0 +1,74 @@
+{
+  "title": "Accounting, bookkeeping or a finance team",
+  "upstream": [
+    {
+      "marketplace": "claude-for-financial-services",
+      "repo": "anthropics/financial-services",
+      "plugins": [
+        "financial-analysis"
+      ],
+      "license": "Apache-2.0",
+      "url": "https://github.com/anthropics/financial-services",
+      "checked": "2026-10-02"
+    },
+    {
+      "marketplace": "knowledge-work-plugins",
+      "repo": "anthropics/knowledge-work-plugins",
+      "license": "Apache-2.0",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "checked": "2026-10-02",
+      "plugins": [
+        "finance"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "invoice-check",
+      "title": "Invoice check before payment",
+      "when": "an invoice must be checked before it is paid",
+      "steps": [
+        "Read supplier, amount, VAT, due date and bank details.",
+        "Compare them with the order and the supplier's last invoice.",
+        "Say pay, hold or ask, and why."
+      ],
+      "output": "one line per invoice in invoices-checked.md",
+      "checks": [
+        "compares the bank details with the last invoice",
+        "says pay, hold or ask"
+      ],
+      "examples": [
+        {
+          "input": "Invoice 2026-114, 1210 EUR incl. VAT 21%, new IBAN.",
+          "must_include": [
+            "IBAN",
+            "hold"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "month-close-notes",
+      "title": "Month-end close notes",
+      "when": "the month closes and the team needs the open items",
+      "steps": [
+        "List unreconciled items and their amounts.",
+        "Group them by owner.",
+        "Write what each owner must bring and by when."
+      ],
+      "output": "close-<month>.md",
+      "checks": [
+        "groups items by owner"
+      ],
+      "examples": [
+        {
+          "input": "Bank 4 items unreconciled, 320 EUR; owner: Ana.",
+          "must_include": [
+            "Ana",
+            "320"
+          ]
+        }
+      ]
+    }
+  ]
+}

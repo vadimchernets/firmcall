@@ -1,0 +1,76 @@
+{
+  "title": "Law firm or in-house legal team",
+  "upstream": [
+    {
+      "marketplace": "claude-for-legal",
+      "repo": "anthropics/claude-for-legal",
+      "plugins": [
+        "commercial-legal",
+        "privacy-legal"
+      ],
+      "license": "Apache-2.0",
+      "url": "https://github.com/anthropics/claude-for-legal",
+      "checked": "2026-10-02"
+    },
+    {
+      "marketplace": "knowledge-work-plugins",
+      "repo": "anthropics/knowledge-work-plugins",
+      "license": "Apache-2.0",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "checked": "2026-10-02",
+      "plugins": [
+        "legal"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "contract-review",
+      "title": "Contract first read",
+      "when": "a contract arrives and someone must say what to negotiate",
+      "steps": [
+        "List the parties, the term, the money and the termination clauses.",
+        "Mark every clause that differs from the firm's standard positions.",
+        "Write the three points to negotiate first, with the clause numbers."
+      ],
+      "output": "review-<contract>.md beside the contract",
+      "checks": [
+        "quotes clause numbers",
+        "names the termination terms",
+        "ends with three points to negotiate"
+      ],
+      "examples": [
+        {
+          "input": "Clause 9: either party may terminate with 10 days notice.",
+          "must_include": [
+            "9",
+            "10 days"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deadline-list",
+      "title": "Deadlines from a court letter",
+      "when": "a letter from a court or an authority arrives",
+      "steps": [
+        "Find every date and every period counted from service.",
+        "Count each deadline and say from which day it is counted.",
+        "List who must do what by when."
+      ],
+      "output": "deadlines.md",
+      "checks": [
+        "says from which day each period is counted"
+      ],
+      "examples": [
+        {
+          "input": "You have 20 days from service (served 3 March).",
+          "must_include": [
+            "20",
+            "3 March"
+          ]
+        }
+      ]
+    }
+  ]
+}

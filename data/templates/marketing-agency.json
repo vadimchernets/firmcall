@@ -1,0 +1,64 @@
+{
+  "title": "Marketing or creative agency",
+  "upstream": [
+    {
+      "marketplace": "knowledge-work-plugins",
+      "repo": "anthropics/knowledge-work-plugins",
+      "license": "Apache-2.0",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "checked": "2026-10-02",
+      "plugins": [
+        "marketing",
+        "brand-voice"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "brief-to-plan",
+      "title": "Client brief to campaign plan",
+      "when": "a client sends a brief and the team needs a first plan",
+      "steps": [
+        "List what the client asks for, the deadline and the budget.",
+        "Write goal, audience, channels, three ideas and a timeline.",
+        "List every question the brief leaves open."
+      ],
+      "output": "plan.md",
+      "checks": [
+        "names the deadline",
+        "ends with the open questions"
+      ],
+      "examples": [
+        {
+          "input": "Spring launch, 3000 EUR, start 1 March.",
+          "must_include": [
+            "1 March",
+            "3000"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "post-variants",
+      "title": "Post in the client's voice",
+      "when": "a post is needed for a client's channel",
+      "steps": [
+        "Read the client's voice notes and three past posts.",
+        "Write three variants of different length.",
+        "Mark which claims need the client's confirmation."
+      ],
+      "output": "posts.md",
+      "checks": [
+        "marks claims that need confirmation"
+      ],
+      "examples": [
+        {
+          "input": "New oat croissant, Friday only.",
+          "must_include": [
+            "Friday"
+          ]
+        }
+      ]
+    }
+  ]
+}

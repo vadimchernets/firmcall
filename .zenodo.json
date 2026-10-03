@@ -1,0 +1,20 @@
+{
+  "title": "firmcall: a company's own Claude Code plugin and the rules on every computer",
+  "description": "firmcall is a Claude Code plugin for the person who sets AI up in a company. From an interview about the company's frequent tasks it writes the company's own plugin - one skill per task with examples and tests - its private catalogue and a zip for the organisation's plugin library used by Cowork and chat. It writes the managed settings for every computer (a managed-settings.d drop-in, managed-mcp.json, the shared company-ai-policy.json), the same rules for the claude.ai admin console, a macOS configuration profile for Jamf and an Intune platform script for Windows, and a read-only row-level-security template for a database the agent reads. Its lint catches the settings that silently switch Remote Control off, a global ANTHROPIC_BASE_URL, managed-only keys in user files and deny rules that only the console carries. Python standard library only, no network.",
+  "creators": [
+    {
+      "name": "Chernets, Vadym"
+    }
+  ],
+  "upload_type": "software",
+  "license": "apache-2.0",
+  "keywords": [
+    "claude-code-plugin",
+    "managed-settings",
+    "mdm",
+    "jamf",
+    "intune",
+    "plugin-generator",
+    "for-companies"
+  ]
+}

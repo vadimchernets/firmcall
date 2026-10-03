@@ -1,0 +1,19 @@
+{
+  "name": "firmcall",
+  "description": "The plugin that writes a company's own plugin, and the administrator's path: an interview turns the company's frequent tasks into skills with examples and tests, a private catalogue and a zip for the organisation's plugin library (Cowork and chat); the rules file for every computer (managed-settings.d, managed-mcp.json, the company policy file), the same rules for the claude.ai console, a Jamf configuration profile and an Intune script that put them on many laptops, row-level security for a database the agent reads; a lint for the settings that silently switch the phone remote off, and a check of where a plugin works. It writes and checks; it buys nothing.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Vadym Chernets"
+  },
+  "homepage": "https://github.com/vadimchernets/firmcall",
+  "license": "Apache-2.0",
+  "keywords": [
+    "plugin-builder",
+    "managed-settings",
+    "mdm",
+    "jamf",
+    "intune",
+    "cowork",
+    "for-companies"
+  ]
+}

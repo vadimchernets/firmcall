@@ -1,0 +1,64 @@
+{
+  "title": "Small business, any trade",
+  "upstream": [
+    {
+      "marketplace": "knowledge-work-plugins",
+      "repo": "anthropics/knowledge-work-plugins",
+      "license": "Apache-2.0",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "checked": "2026-10-02",
+      "plugins": [
+        "small-business",
+        "productivity"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "quote-from-request",
+      "title": "Quote from a customer request",
+      "when": "a customer asks what a job would cost",
+      "steps": [
+        "List what the customer asks for and what is missing.",
+        "Price it from the price list; show each line.",
+        "Write the reply with the quote and the questions."
+      ],
+      "output": "quote-<customer>.md",
+      "checks": [
+        "shows each price line",
+        "asks what is missing"
+      ],
+      "examples": [
+        {
+          "input": "Paint two rooms, 14 m2 each, next week.",
+          "must_include": [
+            "14",
+            "?"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "week-plan",
+      "title": "The week on one page",
+      "when": "the week starts",
+      "steps": [
+        "Read the calendar and the open orders.",
+        "List the three things that move money this week.",
+        "Say what can wait."
+      ],
+      "output": "week.md",
+      "checks": [
+        "names three things that move money"
+      ],
+      "examples": [
+        {
+          "input": "Orders: 3 open, one overdue.",
+          "must_include": [
+            "overdue"
+          ]
+        }
+      ]
+    }
+  ]
+}

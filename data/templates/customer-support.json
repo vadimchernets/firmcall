@@ -1,0 +1,64 @@
+{
+  "title": "Customer support desk",
+  "upstream": [
+    {
+      "marketplace": "knowledge-work-plugins",
+      "repo": "anthropics/knowledge-work-plugins",
+      "license": "Apache-2.0",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "checked": "2026-10-02",
+      "plugins": [
+        "customer-support"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "ticket-reply",
+      "title": "Reply to a ticket",
+      "when": "a customer writes and an answer is due",
+      "steps": [
+        "Find the order or account the ticket is about.",
+        "Answer from the help articles; quote the article.",
+        "Escalate to a person when money back, a legal threat or an angry repeat is involved."
+      ],
+      "output": "a draft reply in the ticket",
+      "checks": [
+        "quotes the help article",
+        "says when it escalates"
+      ],
+      "examples": [
+        {
+          "input": "Order 5531 arrived broken, I want my money back.",
+          "must_include": [
+            "5531",
+            "escalate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weekly-themes",
+      "title": "Weekly themes from tickets",
+      "when": "the week ends and the team reviews what customers asked",
+      "steps": [
+        "Group the week's tickets by theme.",
+        "Count each theme and quote one ticket.",
+        "Propose one help article to write or fix."
+      ],
+      "output": "themes-<week>.md",
+      "checks": [
+        "counts each theme"
+      ],
+      "examples": [
+        {
+          "input": "12 tickets about delivery delays, 4 about sizes.",
+          "must_include": [
+            "12",
+            "4"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "company": "Example agency",
+  "slug": "example-agency",
+  "language": "en",
+  "country": "ES",
+  "size": "2-20",
+  "version": "0.1.0",
+  "tasks": [
+    {
+      "id": "brief-to-plan",
+      "title": "Client brief to campaign plan",
+      "when": "a client sends a brief and the team needs a first plan",
+      "inputs": ["the brief (document or e-mail)", "the client's last report, if there is one"],
+      "steps": [
+        "Read the brief and list what the client asks for, the deadline and the budget.",
+        "Write the plan: goal, audience, channels, three ideas, timeline, what we need from the client.",
+        "List every question the brief leaves open."
+      ],
+      "output": "plan.md in the client's project folder",
+      "checks": ["names the deadline", "names the budget or says it is missing", "ends with the open questions"],
+      "examples": [
+        {"input": "Brief: spring launch of a vegan bakery in Valencia, 3000 EUR, start 1 March.",
+         "must_include": ["1 March", "3000", "?"]}
+      ]
+    },
+    {
+      "id": "monthly-report",
+      "title": "Monthly client report",
+      "when": "the month ends and each client gets a report",
+      "inputs": ["the exported analytics CSV", "last month's report"],
+      "steps": [
+        "Read the CSV and last month's report.",
+        "Write what changed, why it matters, and the next month's three steps.",
+        "Keep it to one page."
+      ],
+      "output": "report-<month>.md",
+      "checks": ["compares with last month", "fits on one page"],
+      "examples": [
+        {"input": "CSV: visits 1200 (last month 900), leads 30 (25).", "must_include": ["1200", "900"]}
+      ]
+    }
+  ],
+  "red_paths": ["~/Company/Clients/Contracts", "~/Company/HR"],
+  "yellow_paths": ["~/Company/Projects"],
+  "training_folders": ["~/Company/Training"],
+  "profiles": ["default", "eu"],
+  "max_usd_per_day": 40,
+  "max_usd_per_month": 600,
+  "allowed_providers": [],
+  "deny_providers": [],
+  "trusted_devices": true,
+  "marketplace": {"repo": "example-agency/example-agency-plugins"},
+  "upstream": [
+    {"marketplace": "knowledge-work-plugins", "repo": "anthropics/knowledge-work-plugins", "plugins": ["marketing"],
+     "license": "Apache-2.0", "url": "https://github.com/anthropics/knowledge-work-plugins", "checked": "2026-10-02"}
+  ],
+  "poly_a1_plugins": ["billcall", "gatecall"],
+  "mcp": {"mode": "provided", "servers": {"crm": {"type": "http", "url": "https://mcp.example-crm.com/mcp"}}},
+  "databases": [{"engine": "supabase", "schema": "public", "role": "agency_ai_readonly",
+                 "tables": [{"name": "leads", "owner_column": "owner_email"}]}],
+  "mdm": ["jamf", "intune"]
+}
