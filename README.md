@@ -1,5 +1,7 @@
 # firmcall
 
+> Poly helped? [Give it a star on GitHub](https://github.com/vadimchernets/firmcall) - one click. The plugin is open to everyone either way.
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23116718.svg)](https://doi.org/10.5281/zenodo.23116718)
 
 The plugin that writes a company's own plugin — and the administrator's path that puts the same rules on every
