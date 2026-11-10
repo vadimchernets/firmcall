@@ -53,9 +53,11 @@ the rule the same read went through — so the check can fail. Run it with `FIRM
 ## Installing
 
 ```
-/plugin marketplace add https://raw.githubusercontent.com/vadimchernets/poly-a1-plugins/main/.claude-plugin/marketplace.json
+/plugin marketplace add https://github.com/vadimchernets/poly-a1-plugins/releases/latest/download/marketplace.json
 /plugin install firmcall@poly-a1
 ```
+
+If that address does not answer, the same file is at `https://raw.githubusercontent.com/vadimchernets/poly-a1-plugins/main/.claude-plugin/marketplace.json`.
 
 Then say "make our company its own plugin" or "put the same rules on all our laptops".
 

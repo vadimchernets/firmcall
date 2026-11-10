@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5 — 2026-11-10
+
+- README only: the catalogue is added from its release file (https://github.com/vadimchernets/poly-a1-plugins/releases/latest/download/marketplace.json), so every install counts as a download of the release; the raw address stays as the fallback. A line asks for a star. No skill changes.
+
 ## 0.1.4 — 2026-10-19
 
 - Interface text in eleven languages (de, fr, hi, ja, ko, zh added next to en, es, pt, ru, uk): `lang/<code>.json` for every language of the app.
